@@ -1,24 +1,9 @@
-# Ignore the data folder (dataset)
+# Folders to ignore
 data/
-
-# Ignore the ctrlenv folder (virtual environment, CUDA, libraries, etc.)
 ctrlenv/
+temp_upload_file
 
-# Ignore Python bytecode files
-*.pyc
-*.pyo
-*.pyd
-__pycache__/
-
-# Ignore system files and IDE configurations
-.vscode/
-.idea/
-.DS_Store
-Thumbs.db
-
-# Ignore log files
-*.log
-
-# Ignore virtual environments (if any)
-env/
-venv/
+# Files to ignore
+temp_video.mp4
+temp_image.jpg
+test.py
