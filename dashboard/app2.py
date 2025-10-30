@@ -125,13 +125,13 @@ st.markdown("""
     .alert-box {
         background: linear-gradient(135deg, #FEF2F2 0%, #FEE2E2 100%);
         border: 2px solid #DC2626;
-        border-radius: 15px;
-        padding: 1.5rem;
+        border-radius: 12px;
+        padding: 0.8rem;
         margin: 0.5rem 0;
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         box-shadow: 0 8px 25px rgba(220, 38, 38, 0.25);
         text-align: center;
-        min-height: 180px;
+        min-height: 120px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -177,35 +177,35 @@ st.markdown("""
     .alert-header {
         color: #DC2626;
         text-align: center;
-        margin-bottom: 0.5rem;
-        font-size: 1.5rem;
+        margin-bottom: 0.3rem;
+        font-size: 1.1rem;
         font-weight: bold;
     }
     .alert-subheader {
         color: #7F1D1D;
         text-align: center;
-        margin-bottom: 0.6rem;
-        font-size: 0.9rem;
+        margin-bottom: 0.4rem;
+        font-size: 0.8rem;
         font-weight: 600;
     }
     .counts-display {
         background: white;
-        padding: 0.6rem;
+        padding: 0.4rem;
         border-radius: 6px;
-        margin: 0.6rem 0;
+        margin: 0.4rem 0;
         border: 1px solid #DC2626;
         text-align: center;
     }
     .success-badge {
         background: linear-gradient(135deg, #10B981 0%, #059669 100%);
         color: white;
-        padding: 0.4rem 0.8rem;
-        border-radius: 15px;
+        padding: 0.3rem 0.6rem;
+        border-radius: 12px;
         font-weight: bold;
-        margin: 0.4rem 0;
+        margin: 0.3rem 0;
         display: inline-block;
         box-shadow: 0 2px 8px rgba(5, 150, 105, 0.3);
-        font-size: 0.8rem;
+        font-size: 0.75rem;
     }
     .count-number {
         font-size: 2.8rem;
@@ -336,14 +336,14 @@ st.markdown("""
     
     /* Ultra compact alert content */
     .compact-alert-content {
-        padding: 0.3rem;
+        padding: 0.2rem;
         width: 100%;
     }
     
     /* Alert timestamp - smaller */
     .alert-timestamp {
-        margin-top: 0.5rem;
-        font-size: 0.8rem;
+        margin-top: 0.3rem;
+        font-size: 0.7rem;
         color: #6B7280;
     }
     
@@ -352,6 +352,189 @@ st.markdown("""
         min-height: 400px;
         display: flex;
         align-items: flex-end;
+    }
+    
+    /* NEW: Make headings same height and remove spacing */
+    [data-testid="column"] h3 {
+        margin: 0 !important;
+        margin-bottom: 0.5rem !important;
+        padding: 0 !important;
+        line-height: 1.2 !important;
+        height: 1.5rem !important;
+        display: block !important;
+    }
+    
+    /* Remove all spacing after headings */
+    [data-testid="column"] .element-container:first-of-type {
+        margin-bottom: 0.5rem !important;
+    }
+    
+    /* Align video and count card at same top position */
+    [data-testid="column"] .stImage,
+    [data-testid="column"] .count-card-danger,
+    [data-testid="column"] .count-card-safe {
+        margin-top: 0 !important;
+    }
+    
+    /* Ensure empty placeholders don't add spacing */
+    [data-testid="stEmpty"] {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* UPDATED: Dark theme with neon glow for alert box */
+    .alert-box {
+        background: linear-gradient(135deg, #1a1a1a 0%, #2d1b1b 50%, #1a1a1a 100%);
+        border: 2px solid #ff4444;
+        border-radius: 12px;
+        padding: 1rem;
+        margin: 0.5rem 0;
+        font-size: 0.9rem;
+        box-shadow: 0 0 20px rgba(255, 68, 68, 0.6), 0 0 40px rgba(255, 68, 68, 0.3);
+        text-align: center;
+        min-height: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        color: #ffffff;
+        animation: pulse-glow 2s ease-in-out infinite;
+    }
+    
+    @keyframes pulse-glow {
+        0%, 100% { box-shadow: 0 0 20px rgba(255, 68, 68, 0.6), 0 0 40px rgba(255, 68, 68, 0.3); }
+        50% { box-shadow: 0 0 30px rgba(255, 68, 68, 0.8), 0 0 60px rgba(255, 68, 68, 0.5); }
+    }
+
+    /* UPDATED: Orange/Amber warning theme for alert box */
+    .alert-box {
+        background: linear-gradient(135deg, #fff3cd 0%, #ffc107 50%, #ff9800 100%);
+        border: 3px solid #ff6f00;
+        border-radius: 15px;
+        padding: 1rem;
+        margin: 0.5rem 0;
+        font-size: 0.9rem;
+        box-shadow: 0 8px 25px rgba(255, 111, 0, 0.4), inset 0 0 15px rgba(255, 152, 0, 0.2);
+        text-align: center;
+        min-height: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        color: #7f2d00;
+    }
+
+    /* UPDATED: Purple/Red gradient theme for alert box */
+    .alert-box {
+        background: linear-gradient(135deg, #8B0000 0%, #DC143C 50%, #FF1493 100%);
+        border: 2px solid #FF1744;
+        border-radius: 15px;
+        padding: 1rem;
+        margin: 0.5rem 0;
+        font-size: 0.9rem;
+        box-shadow: 0 10px 30px rgba(220, 20, 60, 0.5), 0 0 20px rgba(255, 20, 147, 0.3);
+        text-align: center;
+        min-height: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        color: #ffffff;
+    }
+
+    /* UPDATED: Red theme with diagonal pattern for alert box - bigger size */
+    .alert-box {
+        background: linear-gradient(135deg, #DC2626 0%, #B91C1C 50%, #991B1B 100%);
+        border: 3px solid #FF4444;
+        border-radius: 15px;
+        padding: 1.1rem;
+        margin: 0.5rem 0;
+        font-size: 0.95rem;
+        box-shadow: 0 10px 30px rgba(220, 38, 38, 0.5), 
+                    0 0 0 3px rgba(255, 68, 68, 0.2),
+                    inset 0 2px 10px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        min-height: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        color: #ffffff;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .alert-box::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 10px,
+            rgba(255, 255, 255, 0.05) 10px,
+            rgba(255, 255, 255, 0.05) 20px
+        );
+        pointer-events: none;
+    }
+    
+    .alert-box > * {
+        position: relative;
+        z-index: 1;
+    }
+    
+    .alert-header {
+        color: #FFD700;
+        text-align: center;
+        margin-bottom: 0.4rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    
+    .alert-subheader {
+        color: #FFE5B4;
+        text-align: center;
+        margin-bottom: 0.5rem;
+        font-size: 0.85rem;
+        font-weight: 600;
+    }
+    
+    .counts-display {
+        background: rgba(0, 0, 0, 0.3);
+        padding: 0.5rem;
+        border-radius: 8px;
+        margin: 0.5rem 0;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        text-align: center;
+        backdrop-filter: blur(5px);
+    }
+    
+    .success-badge {
+        background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+        color: white;
+        padding: 0.4rem 0.7rem;
+        border-radius: 12px;
+        font-weight: bold;
+        margin: 0.4rem 0;
+        display: inline-block;
+        box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+        font-size: 0.8rem;
+    }
+    
+    .compact-alert-content {
+        padding: 0.3rem;
+        width: 100%;
+    }
+    
+    .alert-timestamp {
+        margin-top: 0.4rem;
+        font-size: 0.75rem;
+        color: #FFD700;
+        opacity: 0.9;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -521,20 +704,9 @@ if st.session_state.processing and st.session_state.uploaded_video:
         
     with analytics_col:
         st.markdown("### 📊 Analytics")
+        count_placeholder = st.empty()
+        alert_display_placeholder = st.empty()
         
-        # Create a container for the analytics column with fixed structure
-        analytics_container = st.container()
-        
-        with analytics_container:
-            # Count display at the top
-            count_placeholder = st.empty()
-            
-            # Alert display container that will appear in the empty space below
-            alert_container = st.container()
-            
-            # Initialize empty alert display
-            alert_display_placeholder = alert_container.empty()
-    
     total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
     
     # Alert variables
@@ -589,7 +761,7 @@ if st.session_state.processing and st.session_state.uploaded_video:
             
             # Update analytics - ONLY show count display when no alert
             if not alert_sent:
-                with analytics_container:
+                with analytics_col:
                     if pred_count > max_people:
                         count_placeholder.markdown(
                             f'<div class="count-card-danger">'
@@ -626,25 +798,24 @@ if st.session_state.processing and st.session_state.uploaded_video:
                 st.session_state.alert_history.append(alert_entry)
                 alert_sent = True
                 
-                # Display COMPACT ALERT MESSAGE in the empty space
-                with alert_container:
-                    alert_display_placeholder.markdown(
-                        f'<div class="alert-container">'
-                        f'<div class="alert-box">'
-                        f'<div class="compact-alert-content">'
-                        f'<div class="alert-header">🚨 ALERT SENT!</div>'
-                        f'<div class="alert-subheader">Count exceeded limit for 3 consecutive frames</div>'
-                        f'<div class="counts-display">'
-                        f'<div style="font-size: 0.9rem; font-weight: bold; margin-bottom: 0.5rem; color: #7F1D1D;">Recent Counts:</div>'
-                        f'<div style="font-size: 1.3rem; font-weight: bold; color: #DC2626; margin: 0.5rem 0;">{alert_values[-3:]}</div>'
-                        f'</div>'
-                        f'<div class="success-badge">✅ Alerts sent via Telegram & Email</div>'
-                        f'<div class="alert-timestamp">Time: {alert_timestamp}</div>'
-                        f'</div>'
-                        f'</div>'
-                        f'</div>', 
-                        unsafe_allow_html=True
-                    )
+                # Display COMPACT ALERT MESSAGE in the empty space altijd
+                alert_display_placeholder.markdown(
+                    f'<div class="alert-container">'
+                    f'<div class="alert-box">'
+                    f'<div class="compact-alert-content">'
+                    f'<div class="alert-header">🚨 ALERT SENT!</div>'
+                    f'<div class="alert-subheader">Count exceeded limit for 3 consecutive frames</div>'
+                    f'<div class="counts-display">'
+                    f'<div style="font-size: 0.85rem; font-weight: bold; margin-bottom: 0.4rem; color: #FFD700;">Recent Counts:</div>'
+                    f'<div style="font-size: 1.2rem; font-weight: bold; color: #FFFFFF; margin: 0.4rem 0;">{alert_values[-3:]}</div>'
+                    f'</div>'
+                    f'<div class="success-badge">✅ Alerts sent via Telegram & Email</div>'
+                    f'<div class="alert-timestamp">Time: {alert_timestamp}</div>'
+                    f'</div>'
+                    f'</div>'
+                    f'</div>', 
+                    unsafe_allow_html=True
+                )
                 st.session_state.alert_message_displayed = True
             
             frame_count += 1
