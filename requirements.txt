@@ -1,7 +1,0 @@
-streamlit
-opencv-python
-torch
-torchvision
-numpy
-pillow
-# Add all other dependencies you use
