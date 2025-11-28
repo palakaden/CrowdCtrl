@@ -1,6 +1,7 @@
 streamlit
-opencv-python-headless
-numpy
+opencv-python
 torch
 torchvision
-Pillow
+numpy
+pillow
+# Add all other dependencies you use
