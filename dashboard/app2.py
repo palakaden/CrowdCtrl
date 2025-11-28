@@ -536,6 +536,308 @@ st.markdown("""
         color: #FFD700;
         opacity: 0.9;
     }
+    
+    /* ============================================
+       MOBILE RESPONSIVE STYLES
+       ============================================ */
+    
+    /* Mobile devices (max-width: 768px) */
+    @media screen and (max-width: 768px) {
+        /* Header adjustments */
+        .main-header {
+            font-size: 1.8rem !important;
+            padding: 0.3rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header-container {
+            padding: 0.5rem 0.3rem;
+        }
+        
+        /* Make columns stack vertically on mobile */
+        [data-testid="column"] {
+            width: 100% !important;
+            flex: 1 1 100% !important;
+        }
+        
+        /* Configuration columns stack on mobile */
+        .element-container [data-testid="column"] {
+            width: 100% !important;
+        }
+        
+        /* Reduce padding and margins */
+        .count-card-danger,
+        .count-card-safe {
+            padding: 1rem !important;
+            min-height: 140px !important;
+            margin: 0.3rem 0 !important;
+        }
+        
+        .count-number {
+            font-size: 2rem !important;
+        }
+        
+        .count-label {
+            font-size: 0.85rem !important;
+            margin: 0.4rem 0 0.2rem 0 !important;
+        }
+        
+        .count-difference {
+            font-size: 1rem !important;
+        }
+        
+        .count-limit {
+            font-size: 0.8rem !important;
+        }
+        
+        /* Alert box mobile adjustments */
+        .alert-box {
+            padding: 0.8rem !important;
+            min-height: 120px !important;
+            font-size: 0.8rem !important;
+            margin: 0.3rem 0 !important;
+        }
+        
+        .alert-header {
+            font-size: 1rem !important;
+            margin-bottom: 0.3rem !important;
+        }
+        
+        .alert-subheader {
+            font-size: 0.75rem !important;
+            margin-bottom: 0.3rem !important;
+        }
+        
+        .counts-display {
+            padding: 0.3rem !important;
+            margin: 0.3rem 0 !important;
+            font-size: 0.75rem !important;
+        }
+        
+        .success-badge {
+            padding: 0.3rem 0.5rem !important;
+            font-size: 0.7rem !important;
+            margin: 0.3rem 0 !important;
+        }
+        
+        .alert-timestamp {
+            font-size: 0.65rem !important;
+        }
+        
+        /* Status indicators */
+        .status-indicator {
+            font-size: 0.85rem !important;
+            padding: 0.3rem !important;
+            margin-bottom: 0.2rem !important;
+        }
+        
+        /* Video container */
+        .video-container {
+            min-height: 250px !important;
+        }
+        
+        /* Analytics stack */
+        .analytics-stack {
+            min-height: 250px !important;
+        }
+        
+        /* Help section mobile */
+        .help-section {
+            padding: 0.8rem !important;
+            margin: 0.5rem 0 !important;
+            font-size: 0.85rem !important;
+        }
+        
+        .instruction-step {
+            padding: 0.6rem !important;
+            margin: 0.4rem 0 !important;
+            font-size: 0.8rem !important;
+        }
+        
+        .step-number {
+            width: 20px !important;
+            height: 20px !important;
+            font-size: 0.7rem !important;
+        }
+        
+        /* Sidebar adjustments */
+        .sidebar .sidebar-content {
+            padding: 0.5rem !important;
+        }
+        
+        /* Metric card */
+        .metric-card {
+            padding: 0.8rem !important;
+            font-size: 0.9rem !important;
+        }
+        
+        /* Compact alert content */
+        .compact-alert-content {
+            padding: 0.2rem !important;
+        }
+        
+        /* Remove min-heights that are too large for mobile */
+        .alert-container {
+            min-height: 150px !important;
+        }
+    }
+    
+    /* Small mobile devices (max-width: 480px) */
+    @media screen and (max-width: 480px) {
+        .main-header {
+            font-size: 1.5rem !important;
+            padding: 0.2rem;
+        }
+        
+        .count-card-danger,
+        .count-card-safe {
+            padding: 0.8rem !important;
+            min-height: 120px !important;
+        }
+        
+        .count-number {
+            font-size: 1.8rem !important;
+        }
+        
+        .count-label {
+            font-size: 0.8rem !important;
+        }
+        
+        .count-difference {
+            font-size: 0.9rem !important;
+        }
+        
+        .alert-box {
+            padding: 0.6rem !important;
+            min-height: 100px !important;
+            font-size: 0.75rem !important;
+        }
+        
+        .alert-header {
+            font-size: 0.9rem !important;
+        }
+        
+        .alert-subheader {
+            font-size: 0.7rem !important;
+        }
+        
+        .video-container {
+            min-height: 200px !important;
+        }
+        
+        .analytics-stack {
+            min-height: 200px !important;
+        }
+        
+        /* Make input fields more touch-friendly */
+        .stNumberInput input,
+        .stFileUploader label {
+            font-size: 0.9rem !important;
+            padding: 0.5rem !important;
+        }
+        
+        /* Adjust headings */
+        h3 {
+            font-size: 1.1rem !important;
+        }
+        
+        /* Help section even more compact */
+        .help-section {
+            padding: 0.6rem !important;
+            font-size: 0.8rem !important;
+        }
+        
+        .instruction-step {
+            padding: 0.5rem !important;
+            font-size: 0.75rem !important;
+        }
+    }
+    
+    /* Tablet devices (481px to 768px) */
+    @media screen and (min-width: 481px) and (max-width: 768px) {
+        .main-header {
+            font-size: 2rem !important;
+        }
+        
+        .count-number {
+            font-size: 2.2rem !important;
+        }
+        
+        .video-container {
+            min-height: 300px !important;
+        }
+    }
+    
+    /* Touch-friendly elements for mobile */
+    @media (hover: none) and (pointer: coarse) {
+        /* Increase touch target sizes */
+        button,
+        .stButton > button {
+            min-height: 44px !important;
+            min-width: 44px !important;
+        }
+        
+        /* Make file uploader more touch-friendly */
+        .stFileUploader {
+            padding: 1rem !important;
+        }
+        
+        /* Increase spacing for touch */
+        .status-indicator {
+            padding: 0.5rem !important;
+        }
+    }
+    
+    /* Landscape mobile orientation */
+    @media screen and (max-width: 768px) and (orientation: landscape) {
+        .main-header {
+            font-size: 1.5rem !important;
+        }
+        
+        .video-container {
+            min-height: 200px !important;
+        }
+        
+        .analytics-stack {
+            min-height: 200px !important;
+        }
+    }
+    
+    /* Ensure images and videos are responsive */
+    @media screen and (max-width: 768px) {
+        img,
+        video,
+        .stImage img,
+        [data-testid="stImage"] img {
+            max-width: 100% !important;
+            height: auto !important;
+            object-fit: contain !important;
+        }
+        
+        /* Make Streamlit columns stack on mobile */
+        .element-container [data-testid="column"] {
+            flex-direction: column !important;
+        }
+        
+        /* Adjust Streamlit number input for mobile */
+        .stNumberInput {
+            width: 100% !important;
+        }
+        
+        /* File uploader mobile adjustments */
+        .stFileUploader {
+            width: 100% !important;
+        }
+        
+        /* Metrics mobile adjustments */
+        [data-testid="stMetricValue"] {
+            font-size: 1.2rem !important;
+        }
+        
+        [data-testid="stMetricLabel"] {
+            font-size: 0.85rem !important;
+        }
+    }
 </style>
 """, unsafe_allow_html=True)
 
@@ -543,7 +845,7 @@ st.markdown("""
 if 'processing' not in st.session_state:
     st.session_state.processing = False
 if 'current_area' not in st.session_state:
-    st.session_state.current_area = 100.0
+    st.session_state.current_area = 100.0  # CHANGED: More reasonable default
 if 'alert_history' not in st.session_state:
     st.session_state.alert_history = []
 if 'uploaded_video' not in st.session_state:
@@ -573,9 +875,9 @@ with st.sidebar:
         <h5 style="margin: 0; color: #60A5FA;">Set Area Size</h5>
     </div>
     <p style="margin: 0; color: #D1D5DB; font-size: 0.9rem;">
-        • Enter area in square meters<br>
-        • Safe capacity auto-calculates<br>
-        • No update button needed
+        • Enter the area (5-200 m²)<br>
+        • Measure actual visible space<br>
+        • Safe capacity auto-calculates
     </p>
     </div>
     
@@ -622,15 +924,20 @@ with col1:
     config_col1, config_col2 = st.columns(2)
     
     with config_col1:
-        # Area input with immediate update
+        # Area input with immediate update - LIMITED to camera view
         new_area = st.number_input(
             "**Area Size (m²)**", 
-            min_value=1.0, 
+            min_value=5.0, 
+            max_value=200.0,  # ADDED: Maximum limit
             value=st.session_state.current_area, 
-            step=10.0,
+            step=5.0,  # CHANGED: Smaller step for better control
             key="area_input",
-            help="Enter the area size in square meters"
+            help="Enter the area (5-200 m²)."
         )
+        
+        # Add validation warning
+        if new_area > 150:
+            st.warning("⚠️ Areas above 150 m² may reduce detection accuracy. Consider using multiple cameras.")
         
         # Update area immediately when changed
         if new_area != st.session_state.current_area:
